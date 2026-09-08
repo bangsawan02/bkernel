@@ -1,0 +1,155 @@
+version: 2.1
+
+jobs:
+  build-kernel:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large
+    environment:
+      KERNEL_SOURCE_URL: https://github.com/telokuh02/bkernel/releases/download/v1.0.0-backup/bkernel_backup.tar.gz
+      ARCH: arm64
+      SUBARCH: arm64
+      DEFCONFIG: vendor/surya_defconfig
+      KERNEL_NAME: BaikalOS-Surya
+      ANYKERNEL_DIR: AnyKernel3-Surya
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install build dependencies
+          command: |
+            sudo apt-get update -y
+            sudo apt-get install -y \
+              bc bison flex libssl-dev make \
+              git curl wget zip unzip \
+              python3 libelf-dev libncurses5-dev \
+              build-essential zstd \
+              binutils-aarch64-linux-gnu \
+              gcc-aarch64-linux-gnu \
+              gcc-arm-linux-gnueabi \
+              clang-17 llvm-17 lld-17
+
+      - run:
+          name: Setup Clang symlinks
+          command: |
+            sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-17 100
+            sudo update-alternatives --install /usr/bin/ld.lld ld.lld /usr/bin/ld.lld-17 100
+            sudo update-alternatives --install /usr/bin/llvm-ar llvm-ar /usr/bin/llvm-ar-17 100
+            sudo update-alternatives --install /usr/bin/llvm-nm llvm-nm /usr/bin/llvm-nm-17 100
+            sudo update-alternatives --install /usr/bin/llvm-objcopy llvm-objcopy /usr/bin/llvm-objcopy-17 100
+            sudo update-alternatives --install /usr/bin/llvm-objdump llvm-objdump /usr/bin/llvm-objdump-17 100
+            sudo update-alternatives --install /usr/bin/llvm-strip llvm-strip /usr/bin/llvm-strip-17 100
+            clang --version
+
+      - run:
+          name: Download kernel source
+          command: |
+            mkdir -p $HOME/kernel-source
+            echo "Downloading kernel source from $KERNEL_SOURCE_URL"
+            wget --progress=bar:force "$KERNEL_SOURCE_URL" -O /tmp/kernel-source.tar.gz
+            echo "Extracting kernel source..."
+            tar -xzf /tmp/kernel-source.tar.gz -C $HOME/kernel-source --strip-components=1 2>/dev/null || \
+              tar -xzf /tmp/kernel-source.tar.gz -C $HOME/kernel-source
+            echo "Kernel source contents:"
+            ls -la $HOME/kernel-source/
+            # Check for Makefile to confirm it's a kernel source
+            if [ -f "$HOME/kernel-source/Makefile" ]; then
+              echo "Kernel version: $(head -5 $HOME/kernel-source/Makefile)"
+            fi
+
+      - run:
+          name: Build kernel
+          command: |
+            cd $HOME/kernel-source
+
+            BUILD_START=$(date +"%s")
+            DATE=$(date +"%Y%m%d")
+
+            export CC=clang
+            export CLANG_TRIPLE=aarch64-linux-gnu-
+            export CROSS_COMPILE=aarch64-linux-gnu-
+            export CROSS_COMPILE_ARM32=arm-linux-gnueabi-
+            export LLVM=1
+            export LLVM_IAS=1
+
+            MAKE_FLAGS="
+              ARCH=$ARCH
+              SUBARCH=$SUBARCH
+              CC=$CC
+              CLANG_TRIPLE=$CLANG_TRIPLE
+              CROSS_COMPILE=$CROSS_COMPILE
+              CROSS_COMPILE_ARM32=$CROSS_COMPILE_ARM32
+              LLVM=$LLVM
+              LLVM_IAS=$LLVM_IAS
+              -j$(nproc --all)
+            "
+
+            echo "=== Setting up defconfig: $DEFCONFIG ==="
+            make $MAKE_FLAGS $DEFCONFIG
+
+            echo "=== Building kernel ==="
+            make $MAKE_FLAGS Image.gz dtbs 2>&1 | tee $HOME/build.log
+
+            BUILD_END=$(date +"%s")
+            BUILD_DIFF=$((BUILD_END - BUILD_START))
+            echo "Build completed in $((BUILD_DIFF / 60)) minute(s) and $((BUILD_DIFF % 60)) second(s)"
+
+      - run:
+          name: Build DTB
+          command: |
+            cd $HOME/kernel-source
+            export CC=clang
+            export CROSS_COMPILE=aarch64-linux-gnu-
+            export CROSS_COMPILE_ARM32=arm-linux-gnueabi-
+            export LLVM=1
+            export LLVM_IAS=1
+
+            # Merge DTBs for sm8150 (Surya)
+            find arch/arm64/boot/dts/qcom -name "*.dtb" 2>/dev/null | head -5
+            if [ -d "arch/arm64/boot/dts/qcom" ]; then
+              cat arch/arm64/boot/dts/qcom/*.dtb > /tmp/dtb.img 2>/dev/null || true
+            fi
+
+      - run:
+          name: Package with AnyKernel3
+          command: |
+            DATE=$(date +"%Y%m%d-%H%M")
+
+            # Copy Image.gz to AnyKernel3 dir
+            if [ -f "$HOME/kernel-source/arch/arm64/boot/Image.gz" ]; then
+              cp $HOME/kernel-source/arch/arm64/boot/Image.gz \
+                /home/circleci/project/$ANYKERNEL_DIR/Image.gz
+              echo "Image.gz copied successfully"
+            else
+              echo "ERROR: Image.gz not found!"
+              ls $HOME/kernel-source/arch/arm64/boot/ || true
+              exit 1
+            fi
+
+            # Copy DTB if available
+            if [ -f "/tmp/dtb.img" ] && [ -s "/tmp/dtb.img" ]; then
+              cp /tmp/dtb.img /home/circleci/project/$ANYKERNEL_DIR/dtb
+              echo "DTB copied successfully"
+            fi
+
+            # Create zip
+            cd /home/circleci/project/$ANYKERNEL_DIR
+            ZIP_NAME="${KERNEL_NAME}-KSU-Waydroid-${DATE}.zip"
+            zip -r9 /tmp/${ZIP_NAME} . -x '*.git*' -x 'README.md'
+            echo "Package created: /tmp/${ZIP_NAME}"
+            ls -lh /tmp/${ZIP_NAME}
+
+            # Copy to workspace for artifact upload
+            mkdir -p /tmp/artifacts
+            cp /tmp/${ZIP_NAME} /tmp/artifacts/
+            cp $HOME/build.log /tmp/artifacts/build.log || true
+
+      - store_artifacts:
+          path: /tmp/artifacts
+          destination: kernel
+
+workflows:
+  build:
+    jobs:
+      - build-kernel
