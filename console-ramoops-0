@@ -1,0 +1,287 @@
+[    0.196933] scm_enable_mem_protection: SCM call failed
+[    0.297284] LCDB: qpnp_lcdb_regulator_probe: Failed to parse dt rc=-517
+[    0.298013] spmi spmi-0: pmic_arb_wait_for_done: transaction failed (0x3)
+[    0.316591] sdmmagpie-pinctrl 3400000.pinctrl: invalid resource
+[    0.322705] rpmh_regulator_probe: smpf1: could not find RPMh address for resource
+[    0.322925] rpmh_regulator_probe: smpf2: could not find RPMh address for resource
+[    0.335076] rpmh_regulator_probe: ldof1: could not find RPMh address for resource
+[    0.335294] rpmh_regulator_probe: ldof2: could not find RPMh address for resource
+[    0.335499] rpmh_regulator_probe: ldof4: could not find RPMh address for resource
+[    0.335703] rpmh_regulator_probe: ldof5: could not find RPMh address for resource
+[    0.335906] rpmh_regulator_probe: ldof6: could not find RPMh address for resource
+[    0.336138] rpmh_regulator_probe: ldof7: could not find RPMh address for resource
+[    0.391255] msm_bus_fabric_rpmh_init_driver
+[    0.391327] msm_bus: Probe started
+[    0.392350] msm_bus: DT Parsing complete
+[    0.394382] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.394450] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.394463] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.394508] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.401772] register_client_adhoc:find path.src 161 dest 627
+[    0.401849] register_client_adhoc:Client handle 1 apps_smmu
+[    0.402574] register_client_adhoc:find path.src 161 dest 627
+[    0.402631] register_client_adhoc:Client handle 2 apps_smmu
+[    0.402713] register_client_adhoc:find path.src 161 dest 627
+[    0.402759] register_client_adhoc:Client handle 3 apps_smmu
+[    0.402821] register_client_adhoc:find path.src 22 dest 773
+[    0.402847] register_client_adhoc:Client handle 4 mnoc_hf_0_tbu
+[    0.402901] register_client_adhoc:find path.src 22 dest 773
+[    0.402923] register_client_adhoc:Client handle 5 mnoc_hf_1_tbu
+[    0.402975] register_client_adhoc:find path.src 137 dest 772
+[    0.402999] register_client_adhoc:Client handle 6 mnoc_sf_0_tbu
+[    0.403046] register_client_adhoc:find path.src 154 dest 10076
+[    0.403064] register_client_adhoc:Client handle 7 apps_smmu
+[    0.403114] register_client_adhoc:find path.src 161 dest 627
+[    0.403160] register_client_adhoc:Client handle 8 apps_smmu
+[    0.403219] register_client_adhoc:find path.src 161 dest 627
+[    0.403262] register_client_adhoc:Client handle 9 apps_smmu
+[    0.429404] spmi spmi-0: pmic_arb_wait_for_done: transaction failed (0x3)
+[    0.429409] read failed rc=-5
+[    0.429411] Invalid REVID peripheral type: 00
+[    0.430008] register_client_adhoc:find path.src 90 dest 512
+[    0.430142] register_client_adhoc:find path.src 90 dest 585
+[    0.430188] register_client_adhoc:find path.src 1 dest 676
+[    0.430264] register_client_adhoc:find path.src 143 dest 777
+[    0.430286] register_client_adhoc:Client handle 10 ipa
+[    0.431814] ipa ipa3_smp2p_probe:8679 fail to get smp2p clk resp bit -517
+[    0.433117] ipa ipa3_smp2p_probe:8679 fail to get smp2p clk resp bit -517
+[    0.437757] pcie:pcie_init.
+[    0.445392] register_client_adhoc:find path.src 22 dest 512
+[    0.445582] register_client_adhoc:Client handle 11 bus-proxy-client
+[    0.448441] ipa ipa3_smp2p_probe:8679 fail to get smp2p clk resp bit -517
+[    0.471034] dsi_pll_10nm_lock_status: DSI PLL(1) lock failed, status=0x00000000
+[    0.476357] dsi_pll_10nm_lock_status: DSI PLL(1) lock failed, status=0x00000000
+[    0.479202] ipa ipa3_smp2p_probe:8679 fail to get smp2p clk resp bit -517
+[    0.530809] spmi spmi-0: pmic_arb_wait_for_done: transaction failed (0x3)
+[    0.530816] qcom-spmi-gpio c440000.qcom,spmi:qcom,pm8009@a:pinctrl@c000: read 0x4 failed
+[    0.530820] qcom-spmi-gpio c440000.qcom,spmi:qcom,pm8009@a:pinctrl@c000: failed to populate gpio 0, ret=-5
+[    0.537570] icnss: Unable to create debugfs -19
+[    0.537747] register_client_adhoc:find path.src 125 dest 512
+[    0.537883] register_client_adhoc:Client handle 12 scm_pas
+[    0.538263] register_client_adhoc:find path.src 129 dest 512
+[    0.538294] register_client_adhoc:Client handle 13 pil-modem
+[    0.538480] register_client_adhoc:find path.src 63 dest 512
+[    0.538553] register_client_adhoc:Client handle 14 pil-venus
+[    0.541281] msm_geni_serial 88c000.qcom,qup_uart: Failed to create dbg dir
+[    0.542006] register_client_adhoc:find path.src 1 dest 618
+[    0.542107] register_client_adhoc:Client handle 15 msm-rng-noc
+[    0.544752] diag: diag_pcie_register: failed registering pcie channels
+[    0.544755] diag: MUX: unable to register pcie operations for proc: 0, err: -22
+[    0.544757] diag: MUX: unable to register PCIe operations, continuing with USB registrations for proc: 0, err: -22
+[    0.559173] register_client_adhoc:find path.src 20003 dest 20515
+[    0.559231] register_client_adhoc:find path.src 20004 dest 20515
+[    0.559260] register_client_adhoc:Client handle 16 disp_rsc_mnoc
+[    0.559271] register_client_adhoc:find path.src 20001 dest 20513
+[    0.559297] register_client_adhoc:Client handle 17 disp_rsc_llcc
+[    0.559308] register_client_adhoc:find path.src 20000 dest 20512
+[    0.559334] register_client_adhoc:Client handle 18 disp_rsc_ebi
+[    0.560363] AXI: get_pdata(): Error: Client name not found
+[    0.560370] AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    0.560415] AXI: get_pdata(): Error: Client name not found
+[    0.560417] AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    0.560724] OF: graph: no port node found in /soc/qcom,dsi-display
+[    0.560771] msm-dsi-panel:[dsi_panel_parse_qsync_caps:1346] [nt36672c huaxing fhd video mode dsi panel] qsync min fps not defined rc:-22
+[    0.560789] msm-dsi-panel:[dsi_panel_parse_reset_sequence:2035] RESET SEQ LENGTH = 24
+[    0.567173] register_client_adhoc:find path.src 26 dest 512
+[    0.567401] register_client_adhoc:Client handle 19 grp3d
+[    0.567431] register_client_adhoc:find path.src 26 dest 10036
+[    0.567567] register_client_adhoc:Client handle 20 cnoc
+[    0.567575] query_client_usecase_all: query_start
+[    0.567625] query_client_usecase_all: query_start
+[    0.592921] AXI: get_pdata(): Error: Client name not found
+[    0.592928] AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    0.593101] QSEECOM: qseecom_probe: Unable to register bus client
+[    0.593549] register_client_adhoc:find path.src 125 dest 512
+[    0.593690] register_client_adhoc:Client handle 21 qcedev-noc
+[    0.595504] register_client_adhoc:find path.src 125 dest 512
+[    0.595641] register_client_adhoc:Client handle 22 qcrypto-noc
+[    0.598438] qcom_ice_get_device_tree_data: No vdd-hba-supply regulator, assuming not needed
+[    0.601185] register_client_adhoc:find path.src 123 dest 512
+[    0.601608] register_client_adhoc:find path.src 1 dest 757
+[    0.601826] register_client_adhoc:Client handle 23 ufshc_mem
+[    0.615518] wcnss_pre_alloc_init: Failed to create debugfs dir
+[    0.615526] cnss_utils: Unable to create debugfs -19
+[    0.618970] msm-usb-ssphy-qmp 88e8000.ssphy: failed to get phandle for msm_ssphy_qmp
+[    0.619371] msm-qusb-phy-v2 88e2000.qusb: can't create debugfs root for 88e2000.qusb
+[    0.622112] msm-dwc3 a600000.ssusb: unable to get ssphy device
+[    0.624533] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[1, 1], lane[1, 1], pwr[SLOWAUTO_MODE, SLOWAUTO_MODE], rate = 0
+[    0.624680] usbpd_create error
+[    0.624685] qpnp-pdphy c440000.qcom,spmi:qcom,pm6150@0:qcom,usb-pdphy@1700: usbpd_create failed: -517
+[    0.625085] [NVT-ts] nvt_driver_init 2510: start
+[    0.625092] [NVT-ts] nvt_driver_init 2520: TP info: [Vendor]huaxing [IC]nt36672c
+[    0.625115] [NVT-ts] nvt_ts_probe 1618: start
+[    0.625131] [NVT-ts] nvt_ts_probe 1677: mode=0, max_speed_hz=8000000
+[    0.625137] [NVT-ts] nvt_parse_dt 1047: novatek,reset-gpio=8
+[    0.625140] [NVT-ts] nvt_parse_dt 1050: novatek,irq-gpio=9
+[    0.625144] [NVT-ts] nvt_parse_dt 1057: SWRST_N8_ADDR=0x03F0FE
+[    0.625146] [NVT-ts] nvt_parse_dt 1066: SPI_RD_FAST_ADDR=0x03F310
+[    0.625150] [NVT-ts] nvt_ts_get_regulator 1480: get/put regulator : 1 
+[    0.625248] [NVT-ts] nvt_ts_enable_regulator 1555: enable touch regulator
+[    0.645493] [NVT-ts] nvt_ts_check_chip_ver_trim 1430: buf[1]=0x0C, buf[2]=0x00, buf[3]=0x00, buf[4]=0x72, buf[5]=0x66, buf[6]=0x03
+[    0.645502] [NVT-ts] nvt_ts_check_chip_ver_trim 1449: This is NVT touch IC
+[    0.645659] [NVT-ts] nvt_ts_probe 1809: int_trigger_type=1
+[    0.645872] [NVT-ts] nvt_irq_enable 196: enable=0, desc->depth=1
+[    0.645878] [NVT-ts] nvt_ts_probe 1818: request irq 249 succeed
+[    0.646055] [NVT-ts] nvt_ts_probe 1838: NVT_TOUCH_ESD_PROTECT is 0
+[    0.646069] [NVT-ts] nvt_flash_proc_init 896: Succeeded!
+[    0.646075] [NVT-ts] nvt_flash_proc_init 899: ============================================================
+[    0.646081] [NVT-ts] nvt_flash_proc_init 900: Create /proc/NVTSPI
+[    0.646087] [NVT-ts] nvt_flash_proc_init 901: ============================================================
+[    0.646098] [NVT-ts] nvt_extra_proc_init 1873: create proc/nvt_fw_version Succeeded!
+[    0.646108] [NVT-ts] nvt_extra_proc_init 1881: create proc/nvt_baseline Succeeded!
+[    0.646117] [NVT-ts] nvt_extra_proc_init 1889: create proc/nvt_raw Succeeded!
+[    0.646125] [NVT-ts] nvt_extra_proc_init 1897: create proc/nvt_diff Succeeded!
+[    0.646132] [NVT-ts] nvt_extra_proc_init 1907: create proc/nvt_pf_switch Succeeded!
+[    0.646139] [NVT-ts] nvt_extra_proc_init 1915: create proc/nvt_sensitivity_switch Succeeded!
+[    0.646146] [NVT-ts] nvt_extra_proc_init 1923: create proc/nvt_er_range_switch Succeeded!
+[    0.646153] [NVT-ts] nvt_extra_proc_init 1931: create proc/nvt_max_power_switch Succeeded!
+[    0.646160] [NVT-ts] nvt_extra_proc_init 1939: create proc/nvt_edge_reject_switch Succeeded!
+[    0.646166] [NVT-ts] nvt_extra_proc_init 1947: create proc/nvt_pocket_palm_switch Succeeded!
+[    0.646173] [NVT-ts] nvt_extra_proc_init 1955: create proc/nvt_charger_switch Succeeded!
+[    0.646277] [NVT-ts] nvt_ts_probe 1918: end
+[    0.646291] [NVT-ts] nvt_irq_enable 196: enable=1, desc->depth=0
+[    0.646336] [NVT-ts] nvt_driver_init 2548: finished
+[    0.647728] Macle fpc1020_probeing failed as fpsensor=2(1=fp)
+[    0.648233] gf_spi: gf3258 Create proc entry success!
+[    0.672155] i2c_geni 884000.i2c: i2c error :-107
+[    0.672165] aw8624_i2c_read: i2c_read cnt=0 error=-107
+[    0.684484] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[3, 3], lane[1, 1], pwr[FAST MODE, FAST MODE], rate = 2
+[    0.688049] aw8624_haptic 3-005a: aw8624_i2c_probe: aw8624_read_chipid ret=0
+[    0.853790] msm_npu 9800000.qcom,msm_npu: Unable to startup the chan (-11)
+[    0.853888] msm_npu: debugfs_create_dir for npu failed, error -19
+[    0.855267] wl2866d_probe,enrty
+[    0.855545] wl2866d_init: en_gpio is 1262
+[    0.868221] wl2866d_get_id:wl2866d id is 85
+[    0.884232] wl2866d_print_reg:wl2866d info is reg 3, value 85
+[    0.884413] wl2866d_print_reg:wl2866d info is reg 4, value 85
+[    0.884595] wl2866d_print_reg:wl2866d info is reg 5, value 128
+[    0.884805] wl2866d_print_reg:wl2866d info is reg 6, value 136
+[    0.884997] wl2866d_print_reg:wl2866d info is reg 14, value 15
+[    0.885179] wl2866d_print_reg:wl2866d info is reg 14, value 15
+[    0.885195] wl2866d_probe,successfully
+[    0.889356] nq-nci 0-0028: nfcc_hw_check: - NFCC HW not Supported
+[    0.889428] nq-nci 0-0028: nqx_probe: probing NFCC NQxxx exited successfully
+[    0.896428] register_client_adhoc:find path.src 1 dest 589
+[    0.896773] register_client_adhoc:Client handle 24 cam_ahb
+[    0.896914] register_client_adhoc:find path.src 136 dest 512
+[    0.897119] register_client_adhoc:Client handle 25 cam_hf_0_mnoc
+[    0.897254] register_client_adhoc:find path.src 146 dest 778
+[    0.897303] register_client_adhoc:Client handle 26 cam_hf_0_camnoc
+[    0.897408] register_client_adhoc:find path.src 172 dest 512
+[    0.897606] register_client_adhoc:Client handle 27 cam_hf_1_mnoc
+[    0.897735] register_client_adhoc:find path.src 178 dest 778
+[    0.897787] register_client_adhoc:Client handle 28 cam_hf_1_camnoc
+[    0.897885] register_client_adhoc:find path.src 137 dest 512
+[    0.898090] register_client_adhoc:Client handle 29 cam_sf_0_mnoc
+[    0.898210] register_client_adhoc:find path.src 148 dest 778
+[    0.898257] register_client_adhoc:Client handle 30 cam_sf_0_camnoc
+[    0.898356] register_client_adhoc:find path.src 171 dest 512
+[    0.898551] register_client_adhoc:Client handle 31 cam_sf_1_mnoc
+[    0.898671] register_client_adhoc:find path.src 179 dest 778
+[    0.898722] register_client_adhoc:Client handle 32 cam_sf_1_camnoc
+[    0.910408] CAM_ERR: CAM-UTIL: cam_soc_util_get_option_clk_by_name: 525 No clk named ife_dsp_clk found. Dev vfe2
+[    0.939688] qcom,qpnp-smb5 c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5: surya: batt_profile_fcc_ua = 6000000
+[    0.939756] Couldn't parse device tree rc=-517
+[    0.954187] [bq2597x] bq2597x_charger_probe: lct client->irq=283
+[    1.336050] [ds28e16] verify_get_property: unsupported property 4
+[    1.336082] [ds28e16] verify_get_property: unsupported property 226
+[    1.336087] [ds28e16] verify_get_property: unsupported property 227
+[    1.336092] [ds28e16] verify_get_property: unsupported property 228
+[    1.336097] [ds28e16] verify_get_property: unsupported property 229
+[    1.336101] [ds28e16] verify_get_property: unsupported property 230
+[    1.343771] bt_power_populate_dt_pinfo: bt-reset-gpio not provided in device tree
+[    1.343779] bt_dt_parse_clk_info: clocks is not provided in device tree
+[    1.343781] bt_power_populate_dt_pinfo: clock not provided in device tree
+[    1.348065] register_client_adhoc:find path.src 81 dest 512
+[    1.348522] register_client_adhoc:find path.src 1 dest 608
+[    1.348741] register_client_adhoc:Client handle 33 sdhc2
+[    1.397685] register_client_adhoc:find path.src 1 dest 770
+[    1.397742] register_client_adhoc:Client handle 34 soc:qcom,cpu-cpu-llcc-bw
+[    1.398060] register_client_adhoc:find path.src 129 dest 512
+[    1.398087] register_client_adhoc:Client handle 35 soc:qcom,cpu-llcc-ddr-bw
+[    1.398585] register_client_adhoc:find path.src 1 dest 770
+[    1.398608] register_client_adhoc:Client handle 36 soc:qcom,cpu0-cpu-llcc-lat
+[    1.398709] register_client_adhoc:find path.src 1 dest 770
+[    1.398730] register_client_adhoc:Client handle 37 soc:qcom,cpu6-cpu-llcc-lat
+[    1.398831] register_client_adhoc:find path.src 129 dest 512
+[    1.398853] register_client_adhoc:Client handle 38 soc:qcom,cpu0-llcc-ddr-lat
+[    1.398956] register_client_adhoc:find path.src 129 dest 512
+[    1.398984] register_client_adhoc:Client handle 39 soc:qcom,cpu6-llcc-ddr-lat
+[    1.399097] register_client_adhoc:find path.src 129 dest 512
+[    1.399119] register_client_adhoc:Client handle 40 soc:qcom,cpu0-cpu-ddr-latfloor
+[    1.399225] register_client_adhoc:find path.src 129 dest 512
+[    1.399247] register_client_adhoc:Client handle 41 soc:qcom,cpu6-cpu-ddr-latfloor
+[    1.399354] register_client_adhoc:find path.src 154 dest 512
+[    1.399422] register_client_adhoc:Client handle 42 soc:qcom,npu-npu-ddr-bw
+[    1.399544] register_client_adhoc:find path.src 1 dest 627
+[    1.399618] register_client_adhoc:Client handle 43 soc:qcom,snoc_cnoc_keepalive
+[    1.399826] register_client_adhoc:find path.src 26 dest 512
+[    1.399872] register_client_adhoc:Client handle 44 soc:qcom,gpubw
+[    1.404730] Internal error: undefined instruction: 0 [#1] PREEMPT SMP
+[    1.404736] Modules linked in:
+[    1.404739] Process swapper/0 (pid: 1, stack limit = 0x0000000059ba3f75)
+[    1.404744] CPU: 7 PID: 1 Comm: swapper/0 Tainted: G S              4.14.353-perf #2
+[    1.404746] Hardware name: Qualcomm Technologies, Inc. SDMMAGPIE PM6150 IDP (DT)
+[    1.404749] task: 00000000dc1a0795 task.stack: 0000000059ba3f75
+[    1.404752] pc : 0xffffff878ce19008
+[    1.404757] lr : kretprobe_trampoline+0x0/0xc4
+[    1.404759] sp : ffffff800805bc10 pstate : 60800085
+[    1.404761] x29: ffffff800805bc40 x28: ffffff87950d50f8 
+[    1.404765] x27: ffffff87950c7070 x26: ffffff87958cd000 
+[    1.404768] x25: ffffff87958cd000 x24: ffffff87950c7030 
+[    1.404770] x23: ffffff87940638b4 x22: 0000000000000000 
+[    1.404773] x21: 000000000000000a x20: ffffff8795859d20 
+[    1.404776] x19: ffffffd36b04cb00 x18: 00000000007edb9c 
+[    1.404778] x17: 00000000007edb9c x16: 0000000000000000 
+[    1.404781] x15: 00000000000000c6 x14: 0000000000000050 
+[    1.404784] x13: 0000000000000000 x12: 0000000000000000 
+[    1.404786] x11: 0000000000000000 x10: 0000000000000000 
+[    1.404789] x9 : ffffffd371d25a00 x8 : ffffff879318f504 
+[    1.404791] x7 : 0000000000000000 x6 : ffffffd372e124b3 
+[    1.404794] x5 : 0000000000000000 x4 : 000000000000000e 
+[    1.404796] x3 : 000000000000000a x2 : 0000000000000000 
+[    1.404798] x1 : ffffff87940638b4 x0 : 0000000000000000 
+[    1.404803] 
+[    1.404803] PC: 0xffffff878ce18fc8:
+[    1.404805] 8fc8  ******** ******** ******** ******** ******** ******** ******** ********
+[    1.404813] 8fe8  ******** ******** ******** ******** ******** ******** d10543ff a9bd7bfd
+[    1.404819] 9008  a21901a0 9400681d b4004193 f9000676 b900307f 297dafac 710006fd 54000088
+[    1.404825] 9028  a1403a68 11000108 b9003a68 b4000098 99000f93 14000002 b85e032a 2a1f0380
+[    1.404832] 
+[    1.404832] LR: arch_within_kprobe_blacklist+0xac/0xec:
+[    1.404834] d848  f100211f 540000a1 2a1f03e0 f9400bf3 a8c27bfd d65f03c0 b0009e89 91000129
+[    1.404840] d868  aa1303e8 eb09027f 54ffff03 b0009e89 91000129 eb09011f 54fffde3 17fffff3
+[    1.404845] d888  d10503ff a90007e0 a9010fe2 a90217e4 a9031fe6 a90427e8 a9052fea a90637ec
+[    1.404850] d8a8  a9073fee a90847f0 a9094ff2 a90a57f4 a90b5ff6 a90c67f8 a90d6ffa a90e77fc
+[    1.404856] 
+[    1.404856] SP: 0xffffff800805bbd0:
+[    1.404858] bbd0  8ce19008 ffffff87 60800085 00000000 950d50f8 ffffff87 0805bc40 ffffff80
+[    1.404864] bbf0  ffffffff ffffffff 0805bc40 ffffff80 0805bc40 ffffff80 8ce19008 ffffff87
+[    1.404869] bc10  0805bc40 ffffff80 9309d888 ffffff87 ffffffff ffffffff 00000000 00000000
+[    1.404875] bc30  0805bc40 ffffff80 9318f504 ffffff87 0805bca0 ffffff80 9318f0dc ffffff87
+[    1.404881] 
+[    1.404882] Call trace:
+[    1.404885]  0xffffff878ce19008
+[    1.404887]  tracepoint_probe_register+0x10/0x18
+[    1.404892]  ksu_syscall_hook_manager_init+0x120/0x160
+[    1.404895]  kernelsu_init+0xac/0xd0
+[    1.404898]  do_one_initcall+0xf0/0x1b8
+[    1.404901]  kernel_init_freeable+0x1b4/0x248
+[    1.404906]  kernel_init+0x10/0x1f8
+[    1.404908]  ret_from_fork+0x10/0x18
+[    1.404911] Code: bad PC value
+[    1.404916] ---[ end trace 2579e585cb6fbf62 ]---
+[    1.407945] Kernel panic - not syncing: Attempted to kill init! exitcode=0x0000000b
+[    1.407945] 
+[    1.407951] SMP: stopping secondary CPUs
+[    2.008009] ipa ipa3_active_clients_panic_notifier:293 
+[    2.008009] ---- Active Clients Table ----
+[    2.008009] 
+[    2.008009] Total active clients count: 0
+[    2.008009] 
+[    2.008017] Kernel Offset: 0x78b000000 from 0xffffff8008000000
+[    2.008020] CPU features: 0x00002218
+[    2.008022] Memory Limit: none
+[    2.011030] Rebooting in 5 seconds..
+[    7.011250] SMP: stopping secondary CPUs
+[    7.011257] Going down for restart now
