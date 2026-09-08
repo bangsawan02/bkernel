@@ -27,8 +27,13 @@ jobs:
               build-essential zstd \
               binutils-aarch64-linux-gnu \
               gcc-aarch64-linux-gnu \
-              gcc-arm-linux-gnueabi \
-              clang-17 llvm-17 lld-17
+              gcc-arm-linux-gnueabi
+
+            # Add official LLVM 17 apt repository (not in Ubuntu Jammy standard repos)
+            wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc > /dev/null
+            echo "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-17 main" | sudo tee /etc/apt/sources.list.d/llvm-17.list
+            sudo apt-get update -y
+            sudo apt-get install -y clang-17 llvm-17 lld-17
 
       - run:
           name: Setup Clang symlinks
